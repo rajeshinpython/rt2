@@ -1,0 +1,22 @@
+{% extends 'common.html' %}
+
+{% block content %}
+    <a style="margin-left: 1250px" href="{% url 'main' %}">Logout</a>
+    {% include 'Admin/adminnav.html' %}
+    <form method="post">
+        {% csrf_token %}
+        <table align="center">
+            <tr align="center">
+                <th colspan="2">Course Update</th>
+            </tr>
+                {{ form }}
+            <tr align="center">
+                <th colspan="2"><button type="submit">Update</button> </th>
+            </tr>
+
+        </table>
+    </form>
+
+
+
+{% endblock %}

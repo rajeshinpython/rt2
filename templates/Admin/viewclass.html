@@ -1,0 +1,35 @@
+{% extends 'common.html' %}
+{% block content %}
+    <a style="margin-left: 1250px" href="{% url 'main' %}">Logout</a>
+    {% include 'Admin/adminnav.html' %}
+    {% load static %}
+    <form>
+        <h2 align="center"  style="color: chocolate">All Scheduled Classes</h2>
+        <table align="center" border="2" width="900px">
+            <tr align="center" style="color: blue">
+                <th>Name</th>
+                <th>Faculty</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Fee</th>
+                <th>Duration</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for x in object_list %}
+                <tr align="center">
+                <th>{{ x.name }}</th>
+                <th>{{ x.faculty }}</th>
+                <th>{{ x.date }}</th>
+                <th>{{ x.time }}</th>
+                <th>{{ x.fee }}</th>
+                <th>{{ x.duration }}</th>
+                <th><a href="{% url 'updatecourse' x.id %}" class="btn btn btn-sm" role="button" aria-disabled="true">YES</a> </th>
+                <th><a href="{% url 'deletecourse' x.id %}"><img height="20px" src="{% static 'images/delete1.png' %}"></a> </th>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+
+
+{% endblock %}

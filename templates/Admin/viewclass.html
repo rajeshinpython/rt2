@@ -1,12 +1,12 @@
 {% extends 'common.html' %}
 {% block content %}
-    <a style="margin-left: 1250px" href="{% url 'main' %}">Logout</a>
     {% include 'Admin/adminnav.html' %}
     {% load static %}
     <form>
-        <h2 align="center"  style="color: chocolate">All Scheduled Classes</h2>
+        <h2 align="center"  style="color: chocolate;" >All Scheduled Classes</h2>
         <table align="center" border="2" width="900px">
             <tr align="center" style="color: blue">
+                <th>No</th>
                 <th>Name</th>
                 <th>Faculty</th>
                 <th>Date</th>
@@ -18,6 +18,7 @@
             </tr>
             {% for x in object_list %}
                 <tr align="center">
+                <th>{{ x.id }}</th>
                 <th>{{ x.name }}</th>
                 <th>{{ x.faculty }}</th>
                 <th>{{ x.date }}</th>

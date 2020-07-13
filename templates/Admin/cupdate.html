@@ -1,7 +1,6 @@
 {% extends 'common.html' %}
 
 {% block content %}
-    <a style="margin-left: 1250px" href="{% url 'main' %}">Logout</a>
     {% include 'Admin/adminnav.html' %}
     <form method="post">
         {% csrf_token %}

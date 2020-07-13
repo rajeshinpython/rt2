@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.urls import path,include
 from django.views.generic import TemplateView
 from Admin1 import views
-from students import urls as student_urls
 
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    path('',views.home, name='main'),
+    path('admin/', admin.site.urls),
+
+    path('',views.home,name='main'),
     path('login/', views.LogIn.as_view(), name='login'),
     path('check_adlogin/', views.check_Adlogin, name='check_login'),
     path('addclass/', views.AddClass.as_view(), name='addclass'),
@@ -32,6 +32,7 @@ urlpatterns = [
     path('home/', TemplateView.as_view(template_name='Admin/adhome.html'), name='home'),
 
 
-    path('students/',include(student_urls)),
+    path('students/',include('students.urls')),
+
 ]
 

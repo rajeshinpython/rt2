@@ -21,8 +21,8 @@ from Admin1 import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="home.html"), name='main'),
+    #path('admin/', admin.site.urls),
+    path('',views.home, name='main'),
     path('login/', views.LogIn.as_view(), name='login'),
     path('check_adlogin/', views.check_Adlogin, name='check_login'),
     path('addclass/', views.AddClass.as_view(), name='addclass'),

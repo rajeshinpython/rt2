@@ -70,3 +70,7 @@ class UpdateViews(UpdateView):
 def deletecourse(request,pk):
     CourseModel.objects.get(id=pk).delete()
     return redirect('viewclass')
+
+
+def home(request):
+    return render(request,'home.html')

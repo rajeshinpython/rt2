@@ -13,3 +13,7 @@ class CourseModel(models.Model):
     time = models.TimeField(help_text='24 Hours')
     fee = models.FloatField()
     duration = models.CharField(max_length=30)
+
+
+    def __str__(self):
+        return self.name

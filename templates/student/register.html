@@ -1,10 +1,31 @@
 {% extends 'common.html' %}
 
 {% block content %}
-
     {% include 'student/shmenu.html' %}
     <h2>Student Registration</h2>
-    {{ rf }}
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+    <table align="center">
+        <tr>
+            <th>
+                {{ rf.name }}
+            </th>
+        </tr>
+            <tr><th>{{ rf.contact }}</th></tr>
+            <tr><th>{{ rf.email }}</th></tr>
+            <tr><th>{{ rf.password }}</th></tr>
+        <tr>
+            <th colspan="2">
+                <button type="submit">Register</button>
+            </th>
+        </tr>
+        {% if message %}
+            <tr>
+                <th>{{ message }}</th>
+            </tr>
+        {% endif %}
 
+    </table>
+    </form>
 
 {% endblock %}

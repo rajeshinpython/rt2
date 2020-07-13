@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.views.generic import TemplateView
 from Admin1 import views
-
+from students import urls as student_urls
 
 
 urlpatterns = [
@@ -32,6 +32,6 @@ urlpatterns = [
     path('home/', TemplateView.as_view(template_name='Admin/adhome.html'), name='home'),
 
 
-    path('students/',include('students.urls')),
+    path('students/',include(student_urls)),
 ]
 

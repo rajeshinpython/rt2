@@ -5,7 +5,7 @@ from .models import StudentModel
 # Create your views here.
 class Register(View):
 
-def get(self,request):
+    def get(self,request):
         s={'rf': StudentModelForm()}
         print(s)
         return render(request,"student/register.html",{'rf': StudentModelForm()})

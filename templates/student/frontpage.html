@@ -4,13 +4,38 @@
 {% block content %}
     {% load static %}
     {% include 'student/shmenu.html' %}
-    <table>
+    <table align="center">
     <tr>
         <th>
             <img src="{% static 'images/student_PNG181.png'  %}">
         </th>
-        <th><h3>All Available Courses</h3>
-            <table align="center" border="1">
+        <th><h3 style="color: blue">All Available Courses</h3>
+            <br>
+            <table align="center" border="2" width="500px">
+                <tr style="color: coral">
+                    <th>Course Name</th>
+                    <th>Faculty</th>
+                    <th>Duration</th>
+                    <th>Fee</th>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Naveen</td>
+                    <td>45 Days</td>
+                    <td>4000</td>
+                </tr>
+                <tr>
+                    <td>Django</td>
+                    <td>Naveen</td>
+                    <td>45 Days</td>
+                    <td>4000</td>
+                </tr>
+                <tr>
+                    <td>Real Time Project</td>
+                    <td>Naveen</td>
+                    <td>45 Days</td>
+                    <td>4000</td>
+                </tr>
 
             </table>
         </th>

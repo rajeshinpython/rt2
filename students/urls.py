@@ -6,4 +6,6 @@ urlpatterns = [
         path('register/',views.Register.as_view(),name='register'),
         path('slogin/',TemplateView.as_view(template_name='student/login.html'),name='slogin'),
         path('shome/',views.studentHome,name = 'shome'),
+        path('enroll/',views.Enroll.as_view(),name = 'enroll'),
+        path('save_enroll/<int:pk>/',views.saveEnroll,name='save_enroll'),
 ]

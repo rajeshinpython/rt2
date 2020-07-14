@@ -28,7 +28,7 @@ urlpatterns = [
     path('addclass/', views.AddClass.as_view(), name='addclass'),
     path('viewclass/', views.ViewCourse.as_view(), name='viewclass'),
     path('update/<int:pk>/', views.UpdateViews.as_view(), name='updatecourse'),
-    path('deletecourse/<int:pk>', views.deletecourse, name='deletecourse'),
+    path('deletecourse/<int:pk>/', views.deletecourse, name='deletecourse'),
     path('home/', TemplateView.as_view(template_name='Admin/adhome.html'), name='home'),
 
 

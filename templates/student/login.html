@@ -9,13 +9,13 @@
         <h2 align="center" style="font-family:Arial">Log In</h2>
         <br>
         <table align="center">
-            <tr><th>Username :</th><th><input type="text" id="un"></th></tr>
-            <tr><th>Password :</th><th><input type="password" id="pas"> </th></tr>
+            <tr><th>Username :</th><th><input type="text" name="un" required></th></tr>
+            <tr><th>Password :</th><th><input type="password" name="pas" required> </th></tr>
             <tr><th></th></tr>
             <tr><th colspan="2"><button type="submit">Login</button> </th></tr>
             {% if message %}
             <tr>
-                <th>{{ message.error }}</th>
+                <th>{{ message }}</th>
             </tr>
             {% endif %}
         </table>

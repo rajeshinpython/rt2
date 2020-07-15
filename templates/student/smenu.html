@@ -3,10 +3,9 @@
     <nav class="navbar nav-light nav-bg-light" style="background-color: antiquewhite">
     <table align="center" style="height:0px">
     <tr>
-        <th style="text-align: center;"><a href="{% url 'register' %}" class="btn btn-Primary btn-lg active" role="button" tabindex="-1" aria-disabled="true">Home </a> </th>
         <th style="text-align: center;"><a href="{% url 'enroll' %}" class="btn btn-Primary btn-lg active" role="button" tabindex="-1" aria-disabled="true">Enroll Course </a> </th>
-        <th style="text-align: center;"><a href="" class="btn btn-Primary btn-lg active" role="button" tabindex="-1" aria-disabled="true">View All Enrolled Courses </a></th>
-        <th style="text-align: center;"><a href="" class="btn btn-link btn-lg active" role="button" tabindex="-1" aria-disabled="true">Cancel All Enrolled Courses </a> </th>
+        <th style="text-align: center;"><a href="{% url 'viewenroll' %}" class="btn btn-Primary btn-lg active" role="button" tabindex="-1" aria-disabled="true">View All Enrolled Courses </a></th>
+        <th style="text-align: center;"><a href="{% url 'cancel_enroll' %}" class="btn btn-link btn-lg active" role="button" tabindex="-1" aria-disabled="true">Cancel Enrolled Courses </a> </th>
         <th style="text-align: center; padding-left: 80px" ><a href="{% url 'slogin' %}" class="btn btn-danger btn-lg active" role="button" tabindex="-1" aria-disabled="true">Logout </a></th>
     </tr>
     </table>

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    {% include 'student/smenu.html' %}
+        {% include 'student/smenu.html' %}
     <br>
     <h2 style="text-align: center; color: chocolate;">Enroll the course</h2>
     <br>
@@ -22,13 +22,16 @@
         <td>{{ x.date }}</td>
         <td>{{ x.fee }}</td>
         <td>{{ x.duration }}</td>
-        <td><a href="{% url 'save_enroll' x.id  %}?no={{ s.id }}" >Yes</a></td>
+        <td><a href="{% url 'save_enroll' x.id  %}" >Yes</a></td>
     </tr>
     {% endfor %}
-    {% if message %}
-    <tr><th>{{ message }}</th></tr>
-    {% endif %}
+
     </table>
+    {% for x in messages %}
+        <h3>{{ x }}</h3>
+    {% endfor %}
+
+
 
 
 

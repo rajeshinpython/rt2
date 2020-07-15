@@ -1,0 +1,36 @@
+{% extends 'common.html' %}
+{% block content %}
+    {% include 'student/smenu.html' %}
+    <br>
+
+    <h2 align="center" style="color:blue;">All Enrolled Courses</h2>
+    <br>
+    <table align="center" border="2" style="width: 700px">
+        <tr align="center" style="color:blue;">
+            <th>Name</th>
+            <th>Faculty</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Fee</th>
+            <th>Duration</th>
+        </tr>
+        {% for x in course %}
+            {% for y in x %}
+                <tr>
+                    <th>{{ y.name }}</th>
+                    <th>{{ y.faculty }}</th>
+                    <th>{{ y.date }}</th>
+                    <th>{{ y.time }}</th>
+                    <th>{{ y.fee }}</th>
+                    <th>{{ y.duration }}</th>
+                </tr>
+            {% endfor %}
+
+
+        {% endfor %}
+    </table>
+
+
+
+
+{% endblock %}
